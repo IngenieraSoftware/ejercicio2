@@ -2,6 +2,10 @@ def suma(a, b):
     """Devuelve la suma de a y b."""
     return a + b
 
+def resta(a, b):
+    """Devuelve la resta de a y b."""
+    return a - b
+
 def division(a,b):
     """Devuelve la division de a y b."""
     if b == 0:
@@ -18,6 +22,7 @@ def MCD(a, b):
 def menu():
     print("=== Calculadora - Ejercicio 2 ===")
     print("1. Suma")
+    print("2. Resta")
     print("4. Division")
     print("10. MCD")
     print("0. Salir")
@@ -28,6 +33,12 @@ def menu():
         a = float(input("Ingresa el primer numero: "))
         b = float(input("Ingresa el segundo numero: "))
         resultado = suma(a, b)
+        print(f"Resultado: {resultado}")
+
+    if opcion == "2":
+        a = float(input("Ingresa el primer numero: "))
+        b = float(input("Ingresa el segundo numero: "))
+        resultado = resta(a, b)
         print(f"Resultado: {resultado}")
 
     elif opcion == "4":
