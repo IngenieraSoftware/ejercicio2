@@ -82,3 +82,8 @@ if __name__ == "__main__":
 def modulo(a, b):
     """Devuelve el resto de la división de a entre b."""
     return a % b
+
+def raiz_cubica(numero):
+    if numero < 0:
+        return -((-numero) ** (1 / 3))
+    return numero ** (1 / 3)
