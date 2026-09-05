@@ -15,12 +15,9 @@ def division(a,b):
         raise ValueError("No se puede dividir por cero.")
     return a / b
 
-def MCD(a, b):
-    """Devuelve el máximo común divisor de a y b."""
-    if b == 0:
-        return a
-    else:
-        return MCD(b, a % b) 
+def potencia(a,b):
+    """Devuelve la potencia de a elevado a b"""
+    return pow(a,b)
 
 def menu():
     print("=== Calculadora - Ejercicio 2 ===")
@@ -28,6 +25,7 @@ def menu():
     print("2. Resta")
     print("3. Multiplicacion")
     print("4. Division")
+    print("5. Potencia")
     print("10. MCD")
     print("0. Salir")
 
@@ -56,6 +54,15 @@ def menu():
             print(f"Resultado: {resultado}")
         except ValueError as e:
             print(f"Error: {e}")
+
+    elif opcion == "5":
+        a = float(input("Ingresa la base: "))
+        b = float(input("Ingresa el exponente: "))
+        try:
+            resultado = potencia(a, b)
+            print(f"Resultado: {resultado}")
+        except ZeroDivisionError:
+            print("Error: No se puede elevar 0 a un exponente negativo.")
     elif opcion == "10":
         a = float(input("Ingresa el primer numero: "))
         b = float(input("Ingresa el segundo numero: "))
