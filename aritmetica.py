@@ -28,6 +28,16 @@ def raiz_cuadrada(a):
     """Devuelve la raíz cuadrada de a."""
     return math.sqrt(a)
 
+def MCD(a, b):
+    """Devuelve el máximo común divisor de a y b."""
+    if b == 0:
+        return a
+    else:
+        return MCD(b, a % b) 
+def modulo(a, b):
+    """Devuelve el resto de la división de a entre b."""
+    return a % b
+
 
 def menu():
     print("=== Calculadora - Ejercicio 2 ===")
@@ -37,6 +47,7 @@ def menu():
     print("4. Division")
     print("5. Potencia")
     print("6. Raiz cuadrada")
+    print("7. Modulo")
     print("9. Promedio")
     print("10. MCD")
     print("0. Salir")
@@ -49,7 +60,7 @@ def menu():
         resultado = suma(a, b)
         print(f"Resultado: {resultado}")
 
-    if opcion == "2":
+
     elif opcion == "2":
         a = float(input("Ingresa el primer numero: "))
         b = float(input("Ingresa el segundo numero: "))
@@ -83,6 +94,15 @@ def menu():
         a = float(input("Ingresa el numero: "))
         resultado = raiz_cuadrada(a)
         print(f"Resultado: {resultado}")
+
+
+    elif opcion == "7":
+        a = float(input("Ingresa el primer numero: "))
+        b = float(input("Ingresa el segundo numero: "))
+        resultado = modulo(a, b)
+        print(f"Resultado: {resultado}")
+
+
     elif opcion == "9":
         a = float(input("Ingresa el primer numero: "))
         b = float(input("Ingresa el segundo numero: "))
@@ -106,6 +126,3 @@ def menu():
 if __name__ == "__main__":
     menu()
 
-def modulo(a, b):
-    """Devuelve el resto de la división de a entre b."""
-    return a % b
