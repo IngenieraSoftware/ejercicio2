@@ -1,6 +1,9 @@
 def suma(a, b):
     """Devuelve la suma de a y b."""
     return a + b
+def multiplicacion(a, b):
+    """Devuelve la multiplicacion de a y b."""
+    return a * b
 
 def division(a,b):
     """Devuelve la division de a y b."""
@@ -11,6 +14,7 @@ def division(a,b):
 def menu():
     print("=== Calculadora - Ejercicio 2 ===")
     print("1. Suma")
+    print("3. Multiplicacion")
     print("4. Division")
     print("0. Salir")
 
@@ -21,7 +25,11 @@ def menu():
         b = float(input("Ingresa el segundo numero: "))
         resultado = suma(a, b)
         print(f"Resultado: {resultado}")
-
+    elif opcion == "3":
+        a = float(input("Ingresa el primer numero: "))
+        b = float(input("Ingresa el segundo numero: "))
+        resultado = multiplicacion(a, b)
+        print(f"Resultado: {resultado}")
     elif opcion == "4":
         a = float(input("Ingresa el primer numero: "))
         b = float(input("Ingresa el segundo numero: "))
