@@ -23,3 +23,7 @@ def menu():
 
 if __name__ == "__main__":
     menu()
+
+def modulo(a, b):
+    """Devuelve el resto de la división de a entre b."""
+    return a % b
