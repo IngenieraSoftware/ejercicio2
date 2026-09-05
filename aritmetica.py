@@ -8,10 +8,15 @@ def division(a,b):
         raise ValueError("No se puede dividir por cero.")
     return a / b
 
+def potencia(a,b):
+    """Devuelve la potencia de a elevado a b"""
+    return pow(a,b)
+
 def menu():
     print("=== Calculadora - Ejercicio 2 ===")
     print("1. Suma")
     print("4. Division")
+    print("5. Potencia")
     print("0. Salir")
 
     opcion = input("Elige una opcion: ")
@@ -30,6 +35,15 @@ def menu():
             print(f"Resultado: {resultado}")
         except ValueError as e:
             print(f"Error: {e}")
+
+    elif opcion == "5":
+        a = float(input("Ingresa la base: "))
+        b = float(input("Ingresa el exponente: "))
+        try:
+            resultado = potencia(a, b)
+            print(f"Resultado: {resultado}")
+        except ZeroDivisionError:
+            print("Error: No se puede elevar 0 a un exponente negativo.")
             
     elif opcion == "0":
         print("Saliendo...")
