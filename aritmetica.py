@@ -1,6 +1,9 @@
 def suma(a, b):
     """Devuelve la suma de a y b."""
     return a + b
+def multiplicacion(a, b):
+    """Devuelve la multiplicacion de a y b."""
+    return a * b
 
 def resta(a, b):
     """Devuelve la resta de a y b."""
@@ -29,6 +32,8 @@ def menu():
     print("2. Resta")
     print("4. Division")
     print("9. Promedio")
+    print("3. Multiplicacion")
+    print("4. Division")
     print("10. MCD")
     print("0. Salir")
 
@@ -41,11 +46,17 @@ def menu():
         print(f"Resultado: {resultado}")
 
     if opcion == "2":
+    elif opcion == "2":
         a = float(input("Ingresa el primer numero: "))
         b = float(input("Ingresa el segundo numero: "))
         resultado = resta(a, b)
         print(f"Resultado: {resultado}")
 
+    elif opcion == "3":
+        a = float(input("Ingresa el primer numero: "))
+        b = float(input("Ingresa el segundo numero: "))
+        resultado = multiplicacion(a, b)
+        print(f"Resultado: {resultado}")
     elif opcion == "4":
         a = float(input("Ingresa el primer numero: "))
         b = float(input("Ingresa el segundo numero: "))
