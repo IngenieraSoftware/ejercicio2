@@ -45,6 +45,11 @@ def factorial(a):
     for numero in range(2, a + 1):
         resultado *= numero
     return resultado
+  
+def raiz_cubica(numero):
+    if numero < 0:
+        return -((-numero) ** (1 / 3))
+    return numero ** (1 / 3)
 
 def menu():
     print("=== Calculadora - Ejercicio 2 ===")
@@ -58,6 +63,7 @@ def menu():
     print("8. Factorial")
     print("9. Promedio")
     print("10. MCD")
+    print("11. Raiz cubica")
     print("0. Salir")
 
     opcion = input("Elige una opcion: ")
@@ -131,6 +137,11 @@ def menu():
         b = float(input("Ingresa el segundo numero: "))
         resultado = MCD(a, b)
         print(f"Resultado: {resultado}")
+        
+    elif opcion == "11":
+        a = float(input("Ingresa el numero: "))
+        resultado = raiz_cubica(a)
+        print(f"Resultado: {resultado}")
 
             
     elif opcion == "0":
@@ -141,5 +152,7 @@ def menu():
 
 if __name__ == "__main__":
     menu()
+
+
 
 
