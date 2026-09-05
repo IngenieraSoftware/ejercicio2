@@ -37,7 +37,14 @@ def MCD(a, b):
 def modulo(a, b):
     """Devuelve el resto de la división de a entre b."""
     return a % b
-
+  
+def factorial(a):
+    if a < 0:
+        raise ValueError("El numero debe ser mayor o igual a 0")
+    resultado = 1 
+    for numero in range(2, a + 1):
+        resultado *= numero
+    return resultado
 
 def menu():
     print("=== Calculadora - Ejercicio 2 ===")
@@ -48,6 +55,7 @@ def menu():
     print("5. Potencia")
     print("6. Raiz cuadrada")
     print("7. Modulo")
+    print("8. Factorial")
     print("9. Promedio")
     print("10. MCD")
     print("0. Salir")
@@ -101,6 +109,14 @@ def menu():
         b = float(input("Ingresa el segundo numero: "))
         resultado = modulo(a, b)
         print(f"Resultado: {resultado}")
+    
+    elif opcion == "8":
+        a = int(input("Ingresa un numero para calcular su factorial: "))
+        try:
+            resultado = factorial(a)
+            print(f"El factorial de {a} es: {resultado}")
+        except ValueError as e:
+            print(e)
 
 
     elif opcion == "9":
@@ -125,4 +141,5 @@ def menu():
 
 if __name__ == "__main__":
     menu()
+
 
