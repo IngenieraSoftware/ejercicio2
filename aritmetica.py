@@ -1,6 +1,13 @@
 def suma(a, b):
     """Devuelve la suma de a y b."""
     return a + b
+def multiplicacion(a, b):
+    """Devuelve la multiplicacion de a y b."""
+    return a * b
+
+def resta(a, b):
+    """Devuelve la resta de a y b."""
+    return a - b
 
 def division(a,b):
     """Devuelve la division de a y b."""
@@ -15,8 +22,11 @@ def potencia(a,b):
 def menu():
     print("=== Calculadora - Ejercicio 2 ===")
     print("1. Suma")
+    print("2. Resta")
+    print("3. Multiplicacion")
     print("4. Division")
     print("5. Potencia")
+    print("10. MCD")
     print("0. Salir")
 
     opcion = input("Elige una opcion: ")
@@ -26,7 +36,16 @@ def menu():
         b = float(input("Ingresa el segundo numero: "))
         resultado = suma(a, b)
         print(f"Resultado: {resultado}")
-
+    elif opcion == "2":
+        a = float(input("Ingresa el primer numero: "))
+        b = float(input("Ingresa el segundo numero: "))
+        resultado = resta(a, b)
+        print(f"Resultado: {resultado}")
+    elif opcion == "3":
+        a = float(input("Ingresa el primer numero: "))
+        b = float(input("Ingresa el segundo numero: "))
+        resultado = multiplicacion(a, b)
+        print(f"Resultado: {resultado}")
     elif opcion == "4":
         a = float(input("Ingresa el primer numero: "))
         b = float(input("Ingresa el segundo numero: "))
@@ -44,6 +63,12 @@ def menu():
             print(f"Resultado: {resultado}")
         except ZeroDivisionError:
             print("Error: No se puede elevar 0 a un exponente negativo.")
+    elif opcion == "10":
+        a = float(input("Ingresa el primer numero: "))
+        b = float(input("Ingresa el segundo numero: "))
+        resultado = MCD(a, b)
+        print(f"Resultado: {resultado}")
+
             
     elif opcion == "0":
         print("Saliendo...")
