@@ -1,3 +1,5 @@
+import math
+
 def suma(a, b):
     """Devuelve la suma de a y b."""
     return a + b
@@ -19,6 +21,11 @@ def potencia(a,b):
     """Devuelve la potencia de a elevado a b"""
     return pow(a,b)
 
+def raiz_cuadrada(a):
+    """Devuelve la raíz cuadrada de a."""
+    return math.sqrt(a)
+
+
 def menu():
     print("=== Calculadora - Ejercicio 2 ===")
     print("1. Suma")
@@ -26,6 +33,7 @@ def menu():
     print("3. Multiplicacion")
     print("4. Division")
     print("5. Potencia")
+    print("6. Raiz cuadrada")
     print("10. MCD")
     print("0. Salir")
 
@@ -63,6 +71,11 @@ def menu():
             print(f"Resultado: {resultado}")
         except ZeroDivisionError:
             print("Error: No se puede elevar 0 a un exponente negativo.")
+            
+    elif opcion == "6":
+        a = float(input("Ingresa el numero: "))
+        resultado = raiz_cuadrada(a)
+        print(f"Resultado: {resultado}")
     elif opcion == "10":
         a = float(input("Ingresa el primer numero: "))
         b = float(input("Ingresa el segundo numero: "))
