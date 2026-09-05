@@ -1,3 +1,5 @@
+import math
+
 def suma(a, b):
     """Devuelve la suma de a y b."""
     return a + b
@@ -22,16 +24,19 @@ def potencia(a,b):
 def promedio(a, b):
     """Devuelve el promedio de a y b."""
     return (a + b) / 2
+def raiz_cuadrada(a):
+    """Devuelve la raíz cuadrada de a."""
+    return math.sqrt(a)
+
 
 def menu():
     print("=== Calculadora - Ejercicio 2 ===")
     print("1. Suma")
     print("2. Resta")
-    print("4. Division")
-    print("9. Promedio")
     print("3. Multiplicacion")
     print("4. Division")
     print("5. Potencia")
+    print("6. Raiz cuadrada")
     print("9. Promedio")
     print("10. MCD")
     print("0. Salir")
@@ -73,12 +78,18 @@ def menu():
             print(f"Resultado: {resultado}")
         except ZeroDivisionError:
             print("Error: No se puede elevar 0 a un exponente negativo.")
-     elif opcion == "9":
+            
+    elif opcion == "6":
+        a = float(input("Ingresa el numero: "))
+        resultado = raiz_cuadrada(a)
+        print(f"Resultado: {resultado}")
+    elif opcion == "9":
         a = float(input("Ingresa el primer numero: "))
         b = float(input("Ingresa el segundo numero: "))
         resultado = promedio(a, b)
         print(f"Resultado: {resultado}")
 
+        
     elif opcion == "10":
         a = float(input("Ingresa el primer numero: "))
         b = float(input("Ingresa el segundo numero: "))
