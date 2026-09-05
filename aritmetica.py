@@ -23,3 +23,12 @@ def menu():
 
 if __name__ == "__main__":
     menu()
+
+def factorial(a):
+    if a < 0:
+        raise ValueError("El numero debe ser mayor o igual a 0")
+    resultado = 1 
+    for numero in range(2, a + 1):
+        resultado *= numero
+
+    return resultado
